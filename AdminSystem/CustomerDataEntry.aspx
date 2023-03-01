@@ -190,11 +190,15 @@
         <asp:TextBox ID="txtPostCode" runat="server" CssClass="auto-style10" height="22px" width="221px"></asp:TextBox>
         <asp:Label ID="lblDOB" runat="server" CssClass="auto-style11" height="16px" Text="Date of Birth" width="124px"></asp:Label>
         <asp:TextBox ID="txtDOB" runat="server" CssClass="auto-style12" width="221px" height="22px"></asp:TextBox>
-        <asp:CheckBox ID="chkOver18" runat="server" CssClass="auto-style13" />
+        
         <asp:Label ID="lblOver18" runat="server" CssClass="auto-style14" height="16px" Text="Over 18 ?" width="124px"></asp:Label>
         <asp:Label ID="lblError" runat="server" CssClass="auto-style15"></asp:Label>
         <asp:Button ID="btnOK" runat="server" CssClass="auto-style16" height="29px" OnClick="btnOK_Click" Text="OK" width="60px" />
         <asp:Button ID="btnCancel" runat="server" CssClass="auto-style17" Text="Cancel" />
+        
+          <asp:Button ID="btnFind" runat="server" style="z-index: 1; left: 409px; top: 84px; position: absolute; color: #000080; font-weight: 700; font-family: 'Comic Sans MS';" Text="Find" OnClick="btnFind_Click" />
+        
+          <asp:CheckBox ID="chkOver18" runat="server" style="z-index: 1; left: 131px; top: 300px; position: absolute" />
         
     </form>
 </body>
