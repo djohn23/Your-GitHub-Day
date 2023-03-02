@@ -150,8 +150,98 @@ namespace ClassLibrary
             }
 
         }
-        
-    
-    
+
+        public string Valid(string firstName, string lastName, string address, string postCode, string dOB)
+        {
+            //create a string variable to store the error
+            String Error = "";
+            //create a temporary variable to store date values
+            DateTime DateTemp;
+
+            //if the first name  is blank
+            if (firstName.Length == 0)
+            {
+                //record the error
+                Error = Error + "The First Name cannot be blank : ";
+            }
+
+            //if the first name is greater than 20 characters
+            if (firstName.Length > 20)
+            {
+                //record the error
+                Error = Error + "The first name must be less than 20 characters : ";
+            }
+
+            //if the last name  is blank
+            if (lastName.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Last Name cannot be blank : ";
+            }
+
+            //if the last name is greater than 20 characters
+            if (lastName.Length > 20)
+            {
+                //record the error
+                Error = Error + "The last name must be less than 20 characters : ";
+            }
+
+            //if the address  is blank
+            if (address.Length == 0)
+            {
+                //record the error
+                Error = Error + "The address cannot be blank : ";
+            }
+
+            //if the address is greater than 50 characters
+            if (address.Length > 50)
+            {
+                //record the error
+                Error = Error + "The address must be less than 50 characters : ";
+            }
+
+            try
+            {
+                //copy the dOB value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(dOB);
+                //check to see if the date is equal to YESTERDAY's date
+                if (DateTemp == DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date of birth cannot be today's date : ";
+                }
+
+                //check to see if the date is greater than YESTERDAY's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date of birth cannot be in the future : ";
+                }
+
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date of birth is  not a valid date : ";
+            }
+
+
+            //is the post code blank
+            if (postCode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The post code may not be blank : ";
+            }
+            //if the post code is too long
+            if (postCode.Length > 12)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 12 characters : ";
+            }
+
+            //return any error messages
+            return Error;
+
+        }
     }
 }
