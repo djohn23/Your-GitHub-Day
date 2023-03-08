@@ -2,7 +2,7 @@
 
 namespace ClassLibrary
 {
-    public class clsCustomer
+    public class clsCustomer 
     {
 
         //private data member for CustomerID property
@@ -119,6 +119,7 @@ namespace ClassLibrary
             }
         }
 
+        public string FullName { get; internal set; }
 
         public bool Find(int CustomerID)
         {
