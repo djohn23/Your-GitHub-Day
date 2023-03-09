@@ -28,7 +28,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
         string Error = "";
         //validate the data
         Error = AnCustomer.Valid(FirstName, LastName, Address, PostCode, DOB);
-        {
+        
             if (Error == "")
             {
                 //capture the FirstName
@@ -41,17 +41,23 @@ public partial class _1_DataEntry : System.Web.UI.Page
                 AnCustomer.PostCode = PostCode;
                 //capture DOB
                 AnCustomer.DOB = Convert.ToDateTime(DOB);
-                //store address in the session object
-                Session["AnCustomer"] = AnCustomer;
+            //capture Over18
+            AnCustomer.Over18 = chkOver18.Checked;
+            //create a new instance of the the customer collection
+            clsCustomerCollection CustomerList = new clsCustomerCollection();
+            //set the ThisCustomer property
+            CustomerList.ThisCustomer = AnCustomer;
+            //add the new record
+            CustomerList.Add();
                 //redirect to the viewer page
-                Response.Write("CustomerViewer.aspx");
+                Response.Redirect("CustomerList.aspx");
             }
             else
             {
                 //display the error message to the user
                 lblError.Text = Error;
             }
-        }
+        
 
     }
 
@@ -80,5 +86,10 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
         }
 
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CustomerList.aspx");
     }
 }
