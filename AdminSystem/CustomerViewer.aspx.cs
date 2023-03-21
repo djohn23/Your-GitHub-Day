@@ -21,7 +21,7 @@ public partial class _1Viewer : System.Web.UI.Page
         Response.Write(AnCustomer.Address);
         Response.Write(AnCustomer.PostCode);
         Response.Write(AnCustomer.DOB);
-        //Response.Write(AnCustomer.Over18);
+        Response.Write(AnCustomer.Over18);
 
     }
 }

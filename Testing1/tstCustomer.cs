@@ -146,6 +146,7 @@ namespace Testing1
         }
 
         // PROPERTY DATA TESTS - Creating the Find Method
+        //TEST DATA BASED ON RECORD 3 IN LOCAL DB ON ONEDRIVE
 
         [TestMethod]
         public void TestCustomerID_Found()
@@ -184,7 +185,7 @@ namespace Testing1
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the property
-            if (AnCustomer.FirstName != "Daniel")
+            if (AnCustomer.FirstName != "Dee")
             {
                 OK = false;
             }
@@ -206,7 +207,7 @@ namespace Testing1
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the property
-            if (AnCustomer.LastName != "Davies")
+            if (AnCustomer.LastName != "JayTest")
             {
                 OK = false;
             }
@@ -321,7 +322,7 @@ namespace Testing1
 
         // TESTS FOR PARAMETERS
 
-        //**************************************************************************FIRST NAME PARAMETER TESTS **************************************************************************
+        //********************************* FIRST NAME PARAMETER TESTS **************************************************************************
 
         [TestMethod]
         public void FirstName_MinLessOne()
@@ -434,7 +435,7 @@ namespace Testing1
 
 
 
-        //**************************************************************************LAST NAME PARAMETER TESTS **************************************************************************
+        //**************************** LAST NAME PARAMETER TESTS **************************************************************************
 
         [TestMethod]
         public void LastName_MinLessOne()
@@ -544,7 +545,7 @@ namespace Testing1
             Assert.AreNotEqual(Error, "");
         }
 
-        //**************************************************************************ADDRESS PARAMETER TESTS **************************************************************************
+        //************************************* ADDRESS PARAMETER TESTS **************************************************************************
 
         [TestMethod]
         public void Address_MinLessOne()
@@ -655,7 +656,7 @@ namespace Testing1
             Assert.AreNotEqual(Error, "");
         }
 
-        //**************************************************************************POSTCODE PARAMETER TESTS **************************************************************************
+        //************************** POSTCODE PARAMETER TESTS **************************************************************************
 
         [TestMethod]
         public void PostCode_MinLessOne()
