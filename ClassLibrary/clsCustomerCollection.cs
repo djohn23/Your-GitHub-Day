@@ -37,7 +37,7 @@ namespace ClassLibrary
             }
             set
             { 
-            // we shall worry about this later
+            // we shall worry about this later - NEVER RETURNED TO IN THE HANDOUTS
             }
         }
 
