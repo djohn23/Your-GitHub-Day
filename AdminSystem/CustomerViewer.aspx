@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <p>This is the Stock Viewer Page</p>
+            
         </div>
     </form>
 </body>

@@ -4,7 +4,6 @@ namespace ClassLibrary
 {
     public class clsCustomer 
     {
-
         //private data member for CustomerID property
         private Int32 mCustomerID;
         //private data member for FirstName property
@@ -26,7 +25,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mCustomerID;
-
             }
             set 
             {
@@ -40,7 +38,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mFirstName;
-
             }
             set
             {
@@ -54,7 +51,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mLastName;
-
             }
             set
             {
@@ -68,7 +64,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mAddress;
-
             }
             set
             {
@@ -82,7 +77,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mPostCode;
-
             }
             set
             {
@@ -96,7 +90,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mDOB;
-
             }
             set
             {
@@ -110,7 +103,6 @@ namespace ClassLibrary
             {
                 //this code sends data out of the property
                 return mOver18;
-
             }
             set
             {
@@ -119,7 +111,7 @@ namespace ClassLibrary
             }
         }
 
-        public string FullName { get; internal set; }
+        //public string FullName { get; internal set; }
 
         public bool Find(int CustomerID)
         {
@@ -149,7 +141,6 @@ namespace ClassLibrary
                 //return false indicating a problem
                 return false;
             }
-
         }
 
         public string Valid(string firstName, string lastName, string address, string postCode, string dOB)
@@ -218,7 +209,6 @@ namespace ClassLibrary
                     //record the error
                     Error = Error + "The date of birth cannot be in the future : ";
                 }
-
             }
             catch
             {
