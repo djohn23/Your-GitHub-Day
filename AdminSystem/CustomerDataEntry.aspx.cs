@@ -10,6 +10,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 {
 
     //VARIABLE TO STORE THE PRIMARY KEY WITH THE PAGE LEVEL SCOPE
+    //check the brackets
     Int32 CustomerID;
 
 
